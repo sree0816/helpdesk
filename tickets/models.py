@@ -24,7 +24,7 @@ class Ticket(models.Model):
     sla_hours = models.IntegerField(default=24)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='open')
     created_at = models.DateTimeField(auto_now_add=True)
-    assigned_agent = models.ForeignKey('agents.Agent', null=True, blank=True, on_delete=models.SET_NULL)
+    assigned_agent = models.ForeignKey('agents.Agent', null=True, blank=True, on_delete=models.SET_NULL,)
 
     # def __str__(self):
     #     return self.title

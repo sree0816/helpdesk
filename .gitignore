@@ -4,3 +4,10 @@ __pycache__/
 db.sqlite3
 venv/
 
+/staticfiles/
+/media/
+
+.idea/
+.vscode/
+.DS_Store
+
