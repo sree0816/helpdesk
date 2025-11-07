@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Helpdesk System</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header { margin-bottom: 20px; }
+    nav a { margin-right: 10px; }
+    .card { border: 1px solid #ddd; padding: 12px; border-radius: 6px; margin-bottom: 12px; }
+    .danger { color: red; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Helpdesk</h1>
+    <nav>
+      <a href="{% url 'create' %}">Create Ticket</a> |
+      <a href="{% url 'register' %}">Register Agent</a> |
+      <a href="{% url 'agent_dashboard' %}">Agent Dashboard</a> |
+      <a href="{% url 'dashboard' %}">Admin Dashboard</a> |
+      <a href="/admin">Django Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

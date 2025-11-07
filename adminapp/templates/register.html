@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Agent</title>
+</head>
+<body>
+  <h2>Register a New Agent</h2>
+  <form method="post" action="{% url 'save_agent' %}">
+    {% csrf_token %}
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <button type="submit">Register Agent</button>
+  </form>
+</body>
+</html>

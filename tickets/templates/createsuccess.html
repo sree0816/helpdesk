@@ -1,0 +1,8 @@
+{% extends "tickethome.html" %}
+{% block content %}
+<div class="card">
+  <h3>Ticket submitted!</h3>
+  <p>We received your ticket. You will get an email when it is assigned and when it is closed.</p>
+  <a href="{% url 'create' %}">Create another ticket</a>
+</div>
+{% endblock %}
