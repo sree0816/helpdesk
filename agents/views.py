@@ -4,7 +4,7 @@ from agents.models import Agent
 from tickets.models import Ticket
 
 
-# Create your views here.
+
 def agenthome(request):
     return render(request,'agenthome.html')
 def login(request):
@@ -23,12 +23,12 @@ def agent_dashboard(request):
         password = request.POST.get('password')
 
         try:
-            # Check for agent with matching credentials
+
             agent = Agent.objects.get(username=username, password=password)
-            # Save agent ID in session for later use
+
             request.session['agent_id'] = agent.id
 
-            # Redirect to respective agent dashboard
+
             tickets = Ticket.objects.filter(assigned_agent=agent)
             return render(request, 'agent_dashboard.html', {
                 'tickets': tickets,
