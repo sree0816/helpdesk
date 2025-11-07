@@ -19,12 +19,12 @@ def login(request):
 
 def agent_dashboard(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
+        username = request.POST.get('email')
         password = request.POST.get('password')
 
         try:
 
-            agent = Agent.objects.get(username=username, password=password)
+            agent = Agent.objects.get(email=username, password=password)
 
             request.session['agent_id'] = agent.id
 
