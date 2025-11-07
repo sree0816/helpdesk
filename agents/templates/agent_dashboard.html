@@ -23,7 +23,7 @@
         <td>{% if t.status == 'Overdue' %}<span class="danger">{{ t.status }}</span>{% else %}{{ t.status }}{% endif %}</td>
         <td>
           {% if t.status != 'Closed' %}
-            <form method="post" action="{% url 'update_ticket' t.id %}" style="display:inline;">
+            <form method="post" action="{% url 'update_ticket' tid=t.id %}" style="display:inline;">
               {% csrf_token %}
               <button type="submit">Close</button>
             </form>
