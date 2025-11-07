@@ -53,7 +53,7 @@ def agent_dashboard(request):
             return redirect('login')
 
         
-def upadte_ticket(request,tid):
+def update_ticket(request,tid):
     agent_id=request.session.grt('agent_id')
     if not agent_id:
         return redirect(login)
