@@ -1,11 +1,6 @@
-Perfect 👍 — here’s a **clean, well-structured project guide** formatted for **direct copy-paste into a Word document, PDF, or README**.
-It’s clear, professional, and reviewer-friendly — no Markdown syntax, just headings, spacing, and indentation for a clean layout.
+ HELP DESK MANAGEMENT SYSTEM — PROJECT GUIDE
 
----
 
-# HELP DESK MANAGEMENT SYSTEM — PROJECT GUIDE
-
----
 
 ## PROJECT OVERVIEW
 
@@ -216,11 +211,10 @@ Admins can view key performance indicators (KPIs), SLA breaches, and overall tea
 | Backend Framework      | Django 5.x                                                       |
 | Database               | SQLite (development) / PostgreSQL (optional)                     |
 | Frontend               | HTML5, CSS3, JavaScript, Chart.js                                |
-| Email System           | Django SMTP + dotenv for configuration                           |
+| Email System           | Django SMTP + .env for configuration                           |
 | Concurrency Control    | `transaction.atomic()` and `select_for_update(skip_locked=True)` |
-| Environment Management | python-dotenv                                                    |
+| Environment Management | python-.env                                                    |
 | Data Visualization     | Chart.js                                                         |
-| Testing and Debugging  | Django Development Server                                        |
 
 ---
 
@@ -231,6 +225,7 @@ Admins can view key performance indicators (KPIs), SLA breaches, and overall tea
 3. Scalability: Easily extendable for departments, escalations, and custom SLA rules.
 4. Transparency: Provides complete visibility into system activity through dashboards.
 5. Communication: Customers are notified at every step of the process.
+6. The Django Admin panel (/admin/) can be used for direct database inspection.
 
 
 
