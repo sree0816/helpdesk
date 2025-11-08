@@ -4,6 +4,10 @@
 <html>
 <head>
   <title>Agent Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
 </head>
 <body>
   <h2>Welcome, {{ agent.name }}!</h2>
@@ -13,16 +17,16 @@
 <div class="card">
   <h2>Agent Dashboard — Assigned Tickets</h2>
   {% if tickets %}
-    <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse;">
+    <table border="1" cellpadding="6" cellspacing="0" style="width:100%; border-collapse:collapse;" class="table table bordered">
       <tr><th>ID</th><th>Title</th><th>Priority</th><th>Status</th><th>Action</th></tr>
       {% for t in tickets %}
       <tr>
         <td>{{ t.id }}</td>
         <td>{{ t.title }}</td>
         <td>{{ t.priority }}</td>
-        <td>{% if t.status == 'Overdue' %}<span class="danger">{{ t.status }}</span>{% else %}{{ t.status }}{% endif %}</td>
+        <td>{% if t.status == 'open' %}<span class="danger">{{ t.status }}</span>{% else %}<span class="success">{{ t.status }}</span>{% endif %}</td>
         <td>
-          {% if t.status != 'Closed' %}
+          {% if t.status != 'closed' %}
             <form method="post" action="{% url 'update_ticket' tid=t.id %}" style="display:inline;">
               {% csrf_token %}
               <button type="submit">Close</button>

@@ -1,14 +1,10 @@
 from django.db import models
 
-# Create your models here.
-
-from django.db import models
-
 class Ticket(models.Model):
     STATUS_CHOICES = [
         ('open', 'Open'),
         ('in_progress', 'In Progress'),
-        ('closed', 'Closed'),
+        ('closed', 'Closed'),('overdue','Overdue')
     ]
 
     PRIORITY_CHOICES = [

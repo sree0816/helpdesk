@@ -8,11 +8,7 @@ class Agent(models.Model):
     is_available = models.BooleanField(default=False)
     last_assigned=models.DateTimeField(null=True, blank=True)
 
-    def set_password(self, raw_password):
-        self.password = make_password(raw_password)
 
-    def check_password(self, raw_password):
-        return check_password(raw_password, self.password)
 
     # def __str__(self):
     #     return self.name
