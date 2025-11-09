@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Helpdesk System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     header { margin-bottom: 20px; }
@@ -10,21 +11,24 @@
     .card { border: 1px solid #ddd; padding: 12px; border-radius: 6px; margin-bottom: 12px; }
     .danger { color: red; }
   </style>
+
 </head>
+{% block content %}
 <body>
   <header>
-    <h1>Helpdesk</h1>
-    <nav>
-      <a href="{% url 'create' %}">Create Ticket</a> |
-      <a href="{% url 'register' %}">Register Agent</a> |
-      <a href="{% url 'agent_dashboard' %}">Agent Dashboard</a> |
-      <a href="{% url 'dashboard' %}">Admin Dashboard</a> |
-      <a href="/admin">Django Admin</a>
+    <h1 class="text-center">Helpdesk</h1>
+    <nav style="margin:100px 20%;width:60%;padding:20px; background-color:aliceblue;">
+      <a href="{% url 'create' %}" class="btn btn-primary">Create Ticket</a> |
+      <a href="{% url 'register' %}" class="btn btn-success">Register Agent</a> |
+      <a href="{% url 'dashboard' %}" class="btn btn-success">Admin Dashboard</a> |
+      <a href="/admin" class="btn btn-success">Django Admin</a>|
+            <a href="{% url 'agent_dashboard' %}" class="btn btn-warning" >Agent Dashboard</a> |
+
     </nav>
   </header>
 
   <main>
-    {% block content %}{% endblock %}
+    {% endblock %}
   </main>
 </body>
 </html>

@@ -281,7 +281,7 @@ def update_ticket(request, tid):
     agent = Agent.objects.get(id=agent_id)
     ticket = Ticket.objects.get(id=tid, assigned_agent=agent)
 
-    if request.method == 'POST':
+    if request.method == 'POST' and 'close' in request.POST:
         # 1️⃣ Close the ticket
         ticket.status = 'Closed'
         ticket.save()

@@ -9,6 +9,8 @@
     <meta charset="UTF-8">
     <title>Admin Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; background: #fafafa; }
         h1 { margin-bottom: 20px; color: #333; }
@@ -28,7 +30,7 @@
 </head>
 <body>
 
-<h1>Admin Dashboard</h1>
+<h1 class="text-center mb-5">Admin Dashboard</h1>
 
 <div class="kpi-container">
     <div class="kpi-box">
@@ -54,7 +56,7 @@
 </div>
 
 {% if avg_resolution_time %}
-<p><strong>Average Resolution Time:</strong> {{ avg_resolution_time }}</p>
+<p><strong>Average Resolution Time (hh:mm:ss:ms):</strong> {{ avg_resolution_time }}</p>
 {% endif %}
 
 <div class="charts">
